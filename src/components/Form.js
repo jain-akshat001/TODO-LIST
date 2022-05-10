@@ -10,9 +10,12 @@ function Form(props){
     }
 
     const onClickEventHandler = () => {
-        const newTask = enteredTask;
+        const newTask = {
+            key: Math.random().toString(),
+            value: enteredTask,
+            done: false
+        }
         setEnteredTask('');
-        console.log(newTask);
         props.getEnteredTask(newTask);
     }
 

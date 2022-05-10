@@ -9,12 +9,16 @@ function TodoList(props){
         props.deleteSeletedTask(deletedTask);
     }
 
+    let onToggleTask = toggledTask => {
+        console.log(toggledTask);
+    }
+
     return (
         <div id='list-container'>
             {
                 props.tasks.map(
                     task => (
-                        <TodoListItem text={task} onDelete={deleteTaskHandler}/>
+                        <TodoListItem text={task} onDelete={deleteTaskHandler} onClickCheckbox={onToggleTask}/>
                     )
                 )
             }

@@ -6,17 +6,17 @@ import Form from './components/Form';
 
 let DUMMY_TASKS = [
   {
-    id: '01',
+    key: '01',
     value: 'Home Work',
     done: false
   },
   {
-    id: '02',
+    key: '02',
     value: 'Quiz',
     done: false
   },
   {
-    id: '03',
+    key: '03',
     value: 'Assignment',
     done: false
   }
@@ -26,13 +26,9 @@ function App(){
 
   let [allTasks,setTasks] = useState(DUMMY_TASKS);
   const getNewTask = (task) => {
-      console.log(task);
       let updatedTask = {
-        id: Math.random().toString(),
-        value: task,
-        done: false
+        ...task
       }
-      console.log(updatedTask);
       let updatedTasks = [...allTasks,updatedTask];
       setTasks(updatedTasks);
   }
@@ -41,7 +37,7 @@ function App(){
     console.log(task);
     let updatedTasks = allTasks.filter(
       currTask => {
-        return currTask.id != task.id; 
+        return currTask.key != task.key; 
       }
     ); 
 
