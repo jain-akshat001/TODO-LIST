@@ -1,14 +1,18 @@
 import './TodoList.css'
 import TodoListItem from './TodoListItem';
-function TodoList(){
+import React,{useState} from "react";
 
-    const tasks = ['Home Work', 'Dinner', 'Project'];
+function TodoList(props){
 
     return (
         <div id='list-container'>
-            <TodoListItem text={tasks[0]} />
-            <TodoListItem text={tasks[1]} />
-            <TodoListItem text={tasks[2]} />
+            {
+                props.tasks.map(
+                    task => (
+                        <TodoListItem text={task} />
+                    )
+                )
+            }
         </div>
     )
 }

@@ -1,11 +1,26 @@
 import './Form.css'
+import {useState} from 'react';
 
-function Form(){
+function Form(props){
+
+    const [enteredTask,setEnteredTask] = useState('');
+
+    const onChangeEventHander = event => {
+        setEnteredTask(event.target.value);
+    }
+
+    const onClickEventHandler = () => {
+        const newTask = enteredTask;
+        setEnteredTask('');
+        console.log(newTask);
+        props.getEnteredTask(newTask);
+    }
+
     return (
         <div id='form-container'>
             <form id='form-element'>
-                <input type='text' placeholder='Enter a task...' id='task' name='task' required/>
-                <button type='submit' id='btn'>Add TODO</button>
+                <input type='text' placeholder='Enter a task...' value={enteredTask} onChange={onChangeEventHander} id='task' name='task' required/>
+                <button type='submit' id='btn' onClick={onClickEventHandler}>Add TODO</button>
             </form>
         </div>
     );
