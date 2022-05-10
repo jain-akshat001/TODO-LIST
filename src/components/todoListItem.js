@@ -7,11 +7,13 @@ function TodoListItem(props){
     function clickEventHandler(event){
         event.preventDefault();
         props.onDelete(props.text);
+        props.notyHandler('Task deleted successfully');
     }
 
     let checkEventHandler = (event) => {
         let isChecked = checkbox;
         setCheckbox(!isChecked);
+        props.notyHandler('Task toggled successfully');
     }
 
     const textStyle = {

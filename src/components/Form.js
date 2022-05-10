@@ -17,6 +17,7 @@ function Form(props){
         }
         setEnteredTask('');
         props.getEnteredTask(newTask);
+        props.notyHandler('Task Added');
     }
 
     return (

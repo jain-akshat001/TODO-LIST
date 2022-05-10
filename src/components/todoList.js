@@ -18,7 +18,7 @@ function TodoList(props){
             {
                 props.tasks.map(
                     task => (
-                        <TodoListItem text={task} onDelete={deleteTaskHandler} onClickCheckbox={onToggleTask}/>
+                        <TodoListItem text={task} onDelete={deleteTaskHandler} onClickCheckbox={onToggleTask} notyHandler={props.notyHandler}/>
                     )
                 )
             }
