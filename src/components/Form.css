@@ -1,0 +1,27 @@
+#form-container{
+    margin:5rem auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#task{
+    margin-right: 20px;
+    height: 2rem;
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 2px 2px rgb(34, 32, 28) inset;
+}
+
+#btn{
+    padding: 10px;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: oblique;
+    text-shadow: 1px 1px rgb(198, 150, 150);
+    color: white;
+    background-color: black;
+}

@@ -1,1 +1,9 @@
-
+#heading{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+    text-shadow: 3px 3px rgba(24, 9, 9, 0.496);
+}
